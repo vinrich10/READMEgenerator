@@ -2,6 +2,8 @@
 README generator 
 https://github.com/vinrich10/READMEgenerator
 
+![Farmers Market Finder - Animated gif demo](demo/demo.gif)
+
 https://github.com/vinrich10/READMEgenerator/blob/master/readme.gif?raw=true
 
 # Description
