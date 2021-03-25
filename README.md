@@ -13,7 +13,7 @@ Use this app whenever you’re creating a new repo.
 
 # License
 This project is licensed under the MIT license. 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)(https://opensource.org/licenses/MIT)
 
 # Contributing
 ​Contributors: N/A
@@ -23,5 +23,7 @@ The following is needed to run the test: node index.js
 
 # Questions
 If you have any questions contact me
+![GitHub](https://img.shields.io/github/followers/vinrich10?style=social)
+
 GitHub: https://github.com/vinrich10
 E-Mail: vin.richitelli@gmail.com
