@@ -2,6 +2,7 @@
 README generator 
 https://github.com/vinrich10/READMEgenerator
 
+https://github.com/vinrich10/READMEgenerator/blob/master/readme.gif?raw=true
 
 # Description
 This app allows developers to create a standard professional README file. When the app is installed, run the app via node and then answer the questions when prompted.
