@@ -1,7 +1,7 @@
 {
-  "name": "static-site",
+  "name": "index",
   "version": "1.0.0",
-  "description": "",
+  "description": "## My favorite game right now is: [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "fs": "0.0.1-security",
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinrich10/READMEgenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vinrich10/READMEgenerator/issues"
+  },
+  "homepage": "https://github.com/vinrich10/READMEgenerator#readme",
+  "keywords": [
+    "npm",
+    "start"
+  ],
+  "devDependencies": {}
 }

@@ -1,76 +1,127 @@
-const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown")
+const inquirer = require('inquirer');
 const fs = require("fs");
 const util = require("util");
 
-// array of questions for user
-const questions = [
-    {
-        type: "input",
-        name: "title",
-        message: "What is the title for your project?"
-    },
-    {
-        type: "input",
-        name: "description",
-        message: "How would you describe your project?"
-    },
-    {
-        type: "input",
-        name: "installation",
-        message: "What are the installation instructions?"
-    },
-    {
-        type: "input",
-        name: "Usage",
-        message: "How will this application be used?"
-    },
-    {
-        type: "input",
-        name: "Contributing",
-        message: "Who contributed to this project?"
-    },
-    {
-        type: "List",
-        name: "License",
-        message: "Which license is being used?"
-        choices: [
-            "MIT",
-            "ISC",
-            "IPA",
-        ]
-    },
-    {
-        type: "input",
-        name: "Tests",
-        message: "What commands are needed to test this application? "
-    },
-    {
-        type: "input",
-        name: "Username",
-        message: "What is your Github username?"
-    },
-    {
-        type: "input",
-        name: "Email",
-        message: "What is your email address?"
-    },
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
-// function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if(err) throw err
+function promptUser() {
+    return inquirer.prompt([{
+            type: "input",
+            name: "title",
+            message: "What is the title of your project?"
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "How would you describe project?"
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "What are the installation instructions?"
+        },
+        {
+            type: "input",
+            name: "usage",
+            message: "How will this application be used?"
+        },
+        {
+            type: "input",
+            name: "contribution",
+            message: "Who contributed to this project?"
+        },
+        {
+            type: "input",
+            name: "test",
+            message: "What commands are needed to test this project?"
+        },
+        {
+            type: "list",
+            name: "license",
+            message: "Which license would is being used?",
+            choices: [
+                "ISC",
+                "MIT",
+                "IPA"
+            ]
+        },
+        {
+            type: "input",
+            name: "username",
+            message: "What is your github username?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email address?"
+        }
+    ]);
+}
+
+function generateREADME(answers) {
+    return `# ${answers.title}
+
+[![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license}-blue.svg)](https://opensource.org/licenses/${answers.license})
+
+## Description
+    
+${answers.description}
+    
+## Table of Contents
+    
+[Description](#description) 
+
+[Installation Instructions](#installation-instructions) 
+
+[Usage Information](#usage-information) 
+
+[License](#license)  
+
+[Contribution Guidelines](#contribution-guidelines) 
+
+[Tests](#tests) 
+ 
+[Questions](#questions)
+    
+## Installation Instructions
+
+${answers.installation}
+    
+## Usage Information
+
+${answers.usage}
+    
+## License
+
+[![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license}-blue.svg)](https://opensource.org/licenses/${answers.license})
+This application uses the ${answers.license} license.  Click the badge to be brought to the full license.
+    
+## Contribution Guidelines
+
+${answers.contribution}
+    
+## Tests
+
+${answers.test}
+    
+## Questions
+
+If you have any questions about the application, be sure to contact me at my [e-mail](mailto:${answers.email})
+
+Alternatively you can find me and my other works at my [Github account](https://github.com/${answers.github})
+
+`;
+}
+
+promptUser()
+    .then(function (answers) {
+        const readme = generateREADME(answers);
+        return writeFileAsync("exampleREADME.md", readme);
     })
-}
-
-// function to initialize program
-function init() {
-    inquirer.prompt(questions)
-        .then(res => {
-            writeToFile("README.md", generateMarkdown(res))
-        })
-}
-
-// function call to initialize program
-init();
+    .then(function () {
+        console.log("Successfully wrote to exampleREADME.md");
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
