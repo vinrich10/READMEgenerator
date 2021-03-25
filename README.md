@@ -16,9 +16,7 @@ Use this app whenever you’re creating a new repo.
 # License
 This project is licensed under the MIT license. 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
+ 
 # Contributing
 ​Contributors: N/A
 
