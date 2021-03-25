@@ -2,9 +2,7 @@
 README generator 
 https://github.com/vinrich10/READMEgenerator
 
-![Farmers Market Finder - Animated gif demo](demo/demo.gif)
-
-https://github.com/vinrich10/READMEgenerator/blob/master/readme.gif?raw=true
+![readme](https://user-images.githubusercontent.com/76268790/112540782-f7f48d00-8d88-11eb-9690-1f8dc10b5a57.gif)
 
 # Description
 This app allows developers to create a standard professional README file. When the app is installed, run the app via node and then answer the questions when prompted.
