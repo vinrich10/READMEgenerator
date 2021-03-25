@@ -2,7 +2,7 @@
 README generator 
 https://github.com/vinrich10/READMEgenerator
 
-![readme](https://user-images.githubusercontent.com/76268790/112537701-62a3c980-8d85-11eb-9765-163b610beb01.gif)
+![readme](https://giphy.com/gifs/tztPVkqgKI9aMy4CvT/html5)
 
 
 # Description
