@@ -25,7 +25,7 @@ The following is needed to run the test: node index.js
 
 # Questions
 If you have any questions contact me
-![GitHub](https://img.shields.io/github/followers/vinrich10?style=social)
+![GitHub](https://img.shields.io/github/followers/vinrich10?style=social)(https://github.com/vinrich10)
 
 GitHub: https://github.com/vinrich10
 E-Mail: vin.richitelli@gmail.com
