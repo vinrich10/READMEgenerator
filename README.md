@@ -3,6 +3,8 @@ README generator
 https://github.com/vinrich10/READMEgenerator
 
 # Walkthrough
+<iframe src="https://drive.google.com/file/d/1Y68nEvJBodUhzueMcCBJsPinn55ITLeV/preview" width="640" height="480"></iframe>
+
 ![readme](https://user-images.githubusercontent.com/76268790/112540782-f7f48d00-8d88-11eb-9690-1f8dc10b5a57.gif)
 
 https://drive.google.com/file/d/1DMgj5KzRQA_1B-rcFdy8EhXix70EeaHO/view?usp=sharing
